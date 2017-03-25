@@ -1,14 +1,13 @@
-import Prosper
 from RequestHandler import RequestHandler
 
 
-class Loan(Prosper):
+class Loan:
 
 
     def __init__(self, ):
-        return
+        self.rh = RequestHandler()
+
 
     def get_loans(self):
-
-        RequestHandler.get('loans/')
-
+        loans = self.rh.get('loans/')
+        return loans
